@@ -6,11 +6,11 @@
 #    By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/30 17:31:30 by dufama            #+#    #+#              #
-#    Updated: 2025/10/07 16:31:41 by dufama           ###   ########.fr        #
+#    Updated: 2025/10/08 12:58:05 by dufama           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-UTILS = utils/printf_utils.c
+UTILS = srcs/printf_utils.c srcs/printf_utils2.c
 
 SRCS = ft_printf.c $(UTILS)
 
