@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 14:58:25 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/08 16:22:29 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/08 16:28:11 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,21 @@ int	ft_check_args(va_list *args, char c)
 
 	i = 0;
 	if (c == 'c')
-		i = ft_putchar_printf(va_arg(*args, int));
+		i += ft_putchar_printf(va_arg(*args, int));
 	else if (c == 's')
-		i = ft_putstr_printf(va_arg(*args, char *));
+		i += ft_putstr_printf(va_arg(*args, char *));
 	else if (c == 'd' || c == 'i')
-		i = ft_putnbr_printf(va_arg(*args, int));
+		i += ft_putnbr_printf(va_arg(*args, int));
 	else if (c == 'x')
-		i = ft_putnbr_hex(va_arg(*args, unsigned long));
+		i += ft_putnbr_hex(va_arg(*args, unsigned long));
 	else if (c == 'X')
-		i = ft_putnbr_hex_maj(va_arg(*args, unsigned long));
+		i += ft_putnbr_hex_maj(va_arg(*args, unsigned long));
 	else if (c == '%')
-		i = ft_putchar_printf('%');
+		i += ft_putchar_printf('%');
 	else if (c == 'u')
-		i = ft_putnbr_unsigned(va_arg(*args, unsigned long));
+		i += ft_putnbr_unsigned(va_arg(*args, unsigned long));
 	else if (c == 'p')
-		i = ft_print_pointer(va_arg(*args, void *));
+		i += ft_print_pointer(va_arg(*args, void *));
 	return (i);
 }
 
