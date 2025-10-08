@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 14:58:25 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/08 15:01:59 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/08 16:22:29 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_check_args(va_list *args, char c)
 	else if (c == '%')
 		i = ft_putchar_printf('%');
 	else if (c == 'u')
-		i = ft_putnbr_unsigned(va_arg(*args, unsigned int));
+		i = ft_putnbr_unsigned(va_arg(*args, unsigned long));
 	else if (c == 'p')
 		i = ft_print_pointer(va_arg(*args, void *));
 	return (i);

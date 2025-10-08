@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:20:49 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/08 15:49:42 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/08 16:19:11 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ int	ft_putnbr_printf(long nb)
 		nb *= -1;
 	}
 	if (nb <= 9)
-		i = ft_putchar_printf(nb + '0');
+		i += ft_putchar_printf(nb + '0');
 	else
 	{
-		i = ft_putnbr_printf(nb / 10);
-		i = ft_putnbr_printf(nb % 10);
+		i += ft_putnbr_printf(nb / 10);
+		i += ft_putnbr_printf(nb % 10);
 	}
 	return (i);
 }
@@ -57,11 +57,11 @@ int	ft_putnbr_hex(unsigned long nb)
 	tab = "0123456789abcdef";
 	i = 0;
 	if (nb <= 16)
-		i = ft_putchar_printf(tab[nb]);
+		i += ft_putchar_printf(tab[nb]);
 	else
 	{
-		i = ft_putnbr_hex(nb / 16);
-		i = ft_putnbr_hex(nb % 16);
+		i += ft_putnbr_hex(nb / 16);
+		i += ft_putnbr_hex(nb % 16);
 	}
 	return (i);
 }

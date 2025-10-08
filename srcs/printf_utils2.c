@@ -6,25 +6,23 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 12:51:52 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/08 15:45:32 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/08 16:21:42 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_unsigned(int nb)
+int	ft_putnbr_unsigned(unsigned long nb)
 {
-	unsigned int	n;
 	int				i;
 
-	n = nb;
 	i = 0;
-	if (n <= 10)
-		i += ft_putchar_printf(n + '0');
+	if (nb <= 10)
+		i += ft_putchar_printf(nb + '0');
 	else
 	{
-		i += ft_putnbr_unsigned(n / 10);
-		i += ft_putnbr_unsigned(n % 10);
+		i += ft_putnbr_unsigned(nb / 10);
+		i += ft_putnbr_unsigned(nb % 10);
 	}
 	return (i);
 }

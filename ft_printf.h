@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 15:46:02 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/08 15:51:12 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/08 16:21:54 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_check_args(va_list *args, char c);
 int	ft_putnbr_printf(long nb);
 int	ft_putnbr_hex(unsigned long nb);
 int	ft_putnbr_hex_maj(unsigned long nb);
-int	ft_putnbr_unsigned(int nb);
+int	ft_putnbr_unsigned(unsigned long nb);
 int	ft_print_pointer(void *ptr);
 
 #endif
