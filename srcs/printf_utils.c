@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:20:49 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/08 16:19:11 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/08 19:54:27 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	ft_putnbr_hex(unsigned long nb)
 
 	tab = "0123456789abcdef";
 	i = 0;
-	if (nb <= 16)
+	if (nb < 16)
 		i += ft_putchar_printf(tab[nb]);
 	else
 	{
@@ -73,7 +73,7 @@ int	ft_putnbr_hex_maj(unsigned long nb)
 
 	tab = "0123456789ABCDEF";
 	i = 0;
-	if (nb <= 16)
+	if (nb < 16)
 		i += ft_putchar_printf(tab[nb]);
 	else
 	{
