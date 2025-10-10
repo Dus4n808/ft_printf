@@ -6,7 +6,7 @@
 #    By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/30 17:31:30 by dufama            #+#    #+#              #
-#    Updated: 2025/10/08 12:58:05 by dufama           ###   ########.fr        #
+#    Updated: 2025/10/09 11:57:38 by dufama           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,9 +34,6 @@ CFLAGS = -Wall -Werror -Wextra -I ./
 $(NAME): $(OBJS)
 	$(AR) -$(ARFLAGS) $(NAME) $(OBJS)
 
-bonus:	$(OBJS)
-		$(AR) -$(ARFLAGS) $(NAME) $(OBJS)
-
 all: $(NAME)
 
 clean:
@@ -51,8 +48,4 @@ test: $(NAME) main.c
 	$(CC) $(CFLAGS) main.c -L. -lftprintf -o test
 	./test
 
-# test_bonus: bonus main.c
-# 	$(CC) $(CFLAGS) main.c -L. -lft -o test
-# 	./test
-
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
